@@ -3,19 +3,34 @@ import Taller from "./Taller";
 
 class Main {
     constructor() {
-        this._reservacion = new Reservacion(document.querySelector("#reservacion"), document.querySelector("#info"));
-
+        let agenda = New Reservacion(
+            document.querySelector("#agenda"),
+            document.querySelector("#info")
+        );
         document.querySelector("#btnAdd").addEventListener("click", () => {
-            let nombre = document.querySelector("#nombre").value;
-            let fechainicio = document.querySelector("#fechainicio").value;
-            let fechatermino = document.querySelector("#fechatermino").value;
-            let lugaresdisponibles = document.querySelector("#lugaresdisponibles").value;
+            let form = document.querySelector("#form");
+            if (form.checkValidity() === true){
+                let nombre = document.querySelector("#nombre").value;
+                let fechainicio = document.querySelector("#fechainicio").value;
+                fechainicio = fechainicio.split("-");
+                let fechaI = new Date(fechainicio[0], fechainicio[1]-1, fechainicio[2]);
+                let fechatermino = document.querySelector("#fechatermino").value;
+                fechatermino = fechatermino.split("-");
+                let fechaF = new Date(fechatermino[0], fechatermino[1]-1, fechatermino[2]);
+                let lugaresD = document.querySelector("#lugaresdisponibles").value;
+                let duracion = document.querySelector("#duracion").value;
 
-            let taller = new Taller(nombre, fechainicio, fechatermino, lugaresdisponibles);
-            
-            this._reservacion.addTaller(taller);
-
-        });
+                let objtaller ={
+                nombre: nombre, 
+                fechaI : fechaI, 
+                fechaF : fechaF, 
+                lugaresD: lugaresD,
+                duracion : duracion
+                };
+                let taller = new Taller(objtaller);
+            agenda.addTaller(talleres)
+            }
+            form.classList.add("was-validated"); });
+        }
     }
-}
 let m = new Main();
