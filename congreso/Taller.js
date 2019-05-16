@@ -1,10 +1,10 @@
 export default class Taller {
-    constructor(nombre, fechainicio, fechatermino) {
-        this._nombre = nombre.toUpperCase();
-        this._fechaI = fechaI;
-        this._fechaF = fechaF;
-        this._lugaresD = lugaresD;
-        this._duracion = duracion;
+    constructor(taller) {
+        this._nombre = taller.nombre.toUpperCase();
+        this._fechaI = taller.fechaI;
+        this._fechaF = taller.fechaF;
+        this._lugaresD = taller.lugaresD;
+        this._duracion = taller.duracion;
         this._months = [
             "Ene",
             "Feb",
@@ -51,5 +51,5 @@ export default class Taller {
         this._fechaF.getFullYear();
         return date  
     }
-    
+
 }

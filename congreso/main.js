@@ -28,7 +28,7 @@ class Main {
                 duracion : duracion
                 };
                 let taller = new Taller(objtaller);
-            agenda.addTaller(talleres)
+            agenda.addTaller(taller)
             }
             form.classList.add("was-validated"); });
         }
