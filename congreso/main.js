@@ -1,9 +1,9 @@
 import Reservacion from "./Reservacion.js";
-import Taller from "./Taller";
+import Taller from "./Taller.js";
 
 class Main {
     constructor() {
-        let agenda = New Reservacion(
+        let agenda = new Reservacion(
             document.querySelector("#agenda"),
             document.querySelector("#info")
         );
@@ -28,7 +28,7 @@ class Main {
                 duracion : duracion
                 };
                 let taller = new Taller(objtaller);
-            agenda.addTaller(taller)
+                agenda.addTall(taller)
             }
             form.classList.add("was-validated"); });
         }

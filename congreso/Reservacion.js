@@ -20,17 +20,17 @@ export default class Reservacion{
         })
     }
     _addToTable(taller){
-        let row = this._tableAgenda.insertCell(-1);
+        let row = this._tableAgenda.insertRow(-1);
         let cellNombre = row.insertCell(0);
         let cellFechaI = row.insertCell(1);
         let cellFechaF = row.insertCell(2);
-        let cellCupo = row.insertCell(3);
+        let cellCapacidad = row.insertCell(3);
         let cellDuracion = row.insertCell(4);
 
         cellNombre.innerHTML = taller.nombre
         cellFechaI.innerHTML = taller.getFechaInicioString();
         cellFechaF.innerHTML = taller.getFechaFinalString();
-        cellCupo.innerHTML = taller.lugaresD;
+        cellCapacidad.innerHTML = taller.lugaresD;
         cellDuracion.innerHTML = taller.duracion;
 
         this._cantTalleres++;
@@ -45,7 +45,7 @@ export default class Reservacion{
         };
         this._talleres.push(objTa);
     }
-    addTaller(taller){
+    addTall(taller){
         this._addToTable(taller);
         localStorage.setItem("Talleres", JSON.stringify(this._talleres));
     }
