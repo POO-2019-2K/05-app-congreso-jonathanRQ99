@@ -11,11 +11,96 @@
 <body>
     <div class="jumbotron">
         <h1>Registro</h1>
-        <p>Registro de talleres</p>
+        <p>Registro de talleres al congreso</p>
     </div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-5 ml-5">
+            <div class="col-md-2">
+                <div class= "row">
+                    <form class="col-12 needs-validation" novalidate>
+                        <div class="form-group">
+                            <label for="nombre">Nombre del taller</label>
+                            <input
+                            type="text"
+                            class="form-control"
+                            id="nombre"
+                            placeholder="Escriba el nombre del taller"
+                            />
+                            <div class="valid-feedback">Bien hecho!</div>
+                            <div class="invalid-feedback">Ponga un numbre valido </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="fechainicio">Fecha de inicio</label>
+                            <input
+                            type="date"
+                            class="form-control"
+                            id="fechainicio"
+                            />
+                            <div class="valid-feedback">Bien hecho!</div>
+                            <div class="invalid-feedback">Ponga una fecha valida </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="fechatermino">Fecha de termino</label>
+                            <input
+                            type="date"
+                            class="form-control"
+                            id="fechatermino"
+                            />
+                            <div class="valid-feedback">Bien hecho!</div>
+                            <div class="invalid-feedback">Ponga una fecha valida </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lugaresdisponibles">Lugares disponibles</label>
+                            <input
+                            type="number"
+                            class="form-control"
+                            id="lugaresdisponibles"
+                            />
+                            <div class="valid-feedback">Bien hecho!</div>
+                            <div class="invalid-feedback">Ponga un cupo adecuado</div>
+                        <div class="form-group">
+                            <label for="Duracion">Duracion</label>
+                            <input
+                            type="number"
+                            class="form-control"
+                            id="Duracion"
+                            />
+                            <div class="valid-feedback">Bien hecho!</div>
+                            <div class="invalid-feedback">Ponga una duracion adecuado</div>
+                        </div>
+                        <button type="button" id="btnAdd"
+                        class="btn btn-primary">Registrar</button>
+                    </form>
+                </div>
+                <div class="col-md-2 mt-2">
+                    <table id="info" class="table ml-2 border">
+                        <tbody>
+                            <tr>
+                                <td>Registros:</td>
+                                <td id="numRegistros"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-10">
+            <table id="agenda" class="table border">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Fecha de inicio</th>
+                        <th>Fecha de termino</th>
+                        <th>Lugares disponibles</th>
+                        <th>Duracion</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+                
                 <form class="col-12">
                     <div class="form-group">
                         <label for="nombre">Nombre del taller</label>
@@ -48,6 +133,14 @@
                         type="number"
                         class="form-control"
                         id="lugaresdisponibles"
+                    
+                    />
+                    <div class="form-group">
+                        <label for="lugaresdisponibles">Lugares disponibles</label>
+                        <input
+                        type="number"
+                        class="form-control"
+                        id="lugaresdisponibles"
                         
                         />
                     </div>
@@ -57,34 +150,6 @@
                     </button>
                 </form>
             </div>
-            <div class="col-md-1 ml-5"></div>
-            <div class="col-md-4 ml-5">
-                <table id="info" class="table">
-                    <tbody>
-                        <tr>
-                            <td>Registros:</td>
-                            <td id="numRegistros"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="row my-4">
-            <div class="col-md-1"></div>
-            <div class="col-md-10">
-                <table id="Registro" class="table">
-                    <thead>
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Fecha de inicio</th>
-                            <th>Fecha de termino</th>
-                            <th>Lugares disponibles</th>
-                            <th>Duracion</th>
-                        </tr>
-                    </thead>
-                </table>
-            </div>
-            <div class="col-md-1"></div>
         </div>
     </div>
 
